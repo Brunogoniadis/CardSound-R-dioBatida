@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+tr:nth-child(1){
+    display: none;
+}
+tr:nth-child(2){
+    display: none;
+}
+tr:nth-child(3){
+    display: none;
+}
+tr:nth-child(4){
+    display: none;
+}
+tr:nth-child(5){
+    display: none;
+}
+tr:nth-child(6){
+    display: none;
+}
+tr:nth-child(7){
+    display: none;
+}
+tr:nth-child(8){
+    display: none;
+}
+.td:nth-child(9){
+    font-size: 29px;
+}
+
+.musicName{
+    color: white;    
+    font-weight: bold;
+    margin-bottom: -25%;
+}
+
+.poster{
+    display: none;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,#0184ff 0%, #005296 40%,#005296 60%,#fe7200  100%);
+    background-size: 200% 200%;
+    animation: float 8s linear infinite alternate;
+}
+
+@keyframes float{
+    from{background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+section{
+    padding: 45px;
+    background-image: linear-gradient(to top left,#00a0ed 10%,#005296 50%);
+    background-size: 100% 100%;
+    width: 512px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0 0 0 0.2em #fe7200;
+}
+
+.musicName{
+    align-items: center;
+}
+
+.player{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.buttonContainer{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.player img{
+    height: 35px;
+    height: 35px;
+    background-color: #fe7200;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player a{
+    text-align: center;
+    justify-content: center;
+}
+
+
+header img{
+    width: 140px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2em #fe7200;
+
+}
+
+header h3{
+    margin-top: 5%;
+    color: white;
+    font-size: 2.5rem;
+}
+
+header p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;    
+}
+
+header a{
+    color: white;    
+    margin-bottom: 5px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top-style: solid;
+    border-width: 250%;
+    border-color: #585858;
+
+}
+
+.cliqueNosIcones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fe7200;
+    height: 35px;
+    border-radius: 5%;
+    margin-left: 18%;
+}
+.cliqueNosIcones img{
+    width:30px;
+}
+.cliqueNosIcones a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+}
+
+.socialContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+
+.social img{
+    position: static;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fe7200;
+    transition: 0.80s;
+    margin-bottom: 5%;
+}
+
+
+.social a{
+    text-decoration: none;
+    margin-top: 2%;
+    color: black;
+    font-weight: bold;
+    background-color: #fe7200;
+    border-radius: 2px;
+    transition: 0.80s;
+}
+
+.social a:hover{
+    scale: 120%;
+    transform: rotateY(360deg);
+}
+
+main h3{
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.footer{
+    position: absolute;
+    bottom: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+
+@media(max-width:1334px){
+    section{
+        display: flex;
+        height: 85%
+    }
+    header img{
+        width: 100px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0.2% #585858;
+    }
+    header h3{
+        font-size: 1rem;
+    }
+
+
+    .social img{
+        width: 40px;
+    }
+    .social a{
+        font-size: 0.7rem;
+    }
+
+    main h3{
+        font-size: 0.7rem;
+        margin-bottom: 10%;
+    }
+
+
+    .cliqueNosIcones a{
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width:520px){
+
+    .musicName{
+        position: relative;
+        bottom: -35px;
+        font-size: 0.8rem;
+        
+    }
+
+    .player{
+        align-items: center;
+        justify-content: center;
+    }
+    .buttonContainer img {
+        width: 25px;
+        height: 25px;
+        margin-top: 30%;
+    }
+
+    section{
+        width: 90%;
+        height: 85%;
+        padding: 30px;
+    }
+    
+    header img{
+        width: 100px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0.2% #585858;
+    }
+    header h3{
+        font-size: 1rem;
+    }
+
+
+    .social img{
+        width: 40px;
+    }
+    .social a{
+        font-size: 0.7rem;
+    }
+
+    main h3{
+        font-size: 0.7rem;
+        margin-bottom: 10%;
+    }
+
+
+    .cliqueNosIcones a{
+        font-size: 0.7rem;
+    }
+
+    
+
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/title.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Rádio Batida.com</title>
+    <meta http-equiv="refresh" content="120">
+
+
+</head>
+
+<body>
+    <section>
+
+
+
+
+        <div id="musicName" class="musicName"> </div>
+
+
+
+
+
+        <div class="player">
+            <div class="buttonContainer">
+                <img src="img/play.png" alt="" class="play" id='button' onClick="next()"></img>
+                <a>PLAY</a>
+            </div>
+
+            <div class="buttonContainer">
+                <img src="img/pause.png" alt="" class="play" id='button' onClick="pause()"></img>
+                <a>PAUSE</a>
+            </div>
+
+        </div>
+
+
+
+        <audio id="audio1" src="https://s33.maxcast.com.br:8208/live?id=119646852649" type="audio/mpeg">
+            <p>Seu Navagador não possui suporte para reproduzir nessa página, acesse nosso site para ouvir!</p>
+        </audio>
+
+        </div>
+
+        <header>
+            <img src="img/title.png" alt="logo">
+            <h3>Radío Batida</h3>
+            <p>A Rádio que só pensa em você!</p>
+            <a>www.radiobatida.com.br</a>
+        </header>
+
+
+
+        <main>
+
+            <div class="socialContainer">
+                <div class="social">
+                    <img src="img/e-email.png" class="icon">
+                    <a href="https://www.radiobatida.com/"target="_blank" rel="noopener noreferrer" class="SocialTitle">Nosso site</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/facebook.png" class="icon">
+                    <a href="https://www.facebook.com/Radiobatidaoficial/"target="_blank" rel="noopener noreferrer" class="SocialTitle">Nosso site</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/instagram.png" class="icon">
+                    <a href="https://www.instagram.com/radiobatidaoficial/"target="_blank" rel="noopener noreferrer" class="SocialTitle">Instagram</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/youtube.png" class="icon">
+                    <a href="https://www.youtube.com/channel/UCIjrxxpfn7tmw9wIa-e7R2Q?view_as=subscriber"target="_blank" rel="noopener noreferrer" class="SocialTitle">YouTube</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/e-email.png" class="icon">
+                    <a href="mailto:radiobatidafm@gmail.com"target="_blank" rel="noopener noreferrer" class="SocialTitle">E-mail</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/whatsapp.png" class="icon">
+                    <a href="https://api.whatsapp.com/5521975045582text=Ol%C3%A1%20deixe%20seu%20comentario"target="_blank" rel="noopener noreferrer" class="SocialTitle">Dj<br>Ronaldinho</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/whatsapp.png" class="icon">
+                    <a href="https://api.whatsapp.com/send?phone=5521970083397" target="_blank" rel="noopener noreferrer" class="SocialTitle">Dj<br>Fabrício</a>
+                </div>
+
+                <div class="social">
+                    <img src="img/phone.png" class="icon">
+                    <a href=" "target="_blank" rel="noopener noreferrer" class="SocialTitle">Celular</a>
+                </div>
+            </div>
+
+            <h3>Acesse nossas plataformas, se inscreva <br> e participe ao vivo! <br>
+                Acompanhe sintonizado 24h, curta, anuncie,<br>veja os eventos, fale com os Djs ao vivo,<br>
+                mande seu áudio e conheça nossas parcerias!
+            </h3>
+
+
+
+        </main>
+
+    </section>
+    <div class="cliqueNosIcones">
+        <img src="img/clique.png" alt="">
+        <a href="">CLIQUE NAS REDES!</a>
+    </div>
+    <p class="footer">Copyright 2022 - Criado por Bruno Goniadis Lima</p>
+
+
+    <script>
+
+        const xhr = new XMLHttpRequest();
+        const musicName = document.getElementById('musicName')
+        xhr.onload = function () {
+            if (xhr.readyState === 4 && xhr.status ==200){
+                musicName.innerHTML = xhr.responseText;
+            } else {
+                console.warn('Not data work')
+            }
+        };
+
+        xhr.open('get', 'https://s33.maxcast.com.br:8208/status.xsl');
+        xhr.send();
+        next();
+
+
+
+
+
+        function next() {
+            document.getElementById("audio1").play();
+
+        }
+
+        function pause() {
+            document.getElementById("audio1").pause();
+
+        }
+    </script>
+</body>
+
+</html>
